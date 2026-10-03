@@ -2,6 +2,8 @@
 
 Repositório de replicação do artigo **"Determinantes das exportações brasileiras no período 2000 a 2021"**, de Elena Soihet e Alexandre Pereira Saldanha. O código reproduz as regressões publicadas a partir dos dados originais, em Python.
 
+> **Referência:** SOIHET, E.; SALDANHA, A. P. Determinantes das exportações brasileiras no período 2000 a 2021. In: *Anais do XVI Encontro Internacional da Associação Keynesiana Brasileira*. Niterói (RJ): Faculdade de Economia – UFF, 2023. ISBN 978-65-5941-955-5. Disponível em: [even3.com.br/anais/akb2023/669571](https://www.even3.com.br/anais/akb2023/669571-determinantes-das-exportacoes-brasileiras-no-periodo-2000-a-2021).
+
 ![Coeficientes estimados](output/figures/coeficientes.png)
 
 **Resultado principal:** o quantum exportado pelo Brasil está associado ao PIB chinês (proxy de demanda) e ao preço das exportações de produtos básicos (proxy de oferta). Corrigida a autocorrelação dos resíduos, o câmbio efetivo real deixa de ter efeito estatisticamente significativo.

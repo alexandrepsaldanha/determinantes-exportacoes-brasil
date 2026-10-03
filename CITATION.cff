@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "Se usar este código, cite o artigo original (preferred-citation) e, se quiser, este repositório."
+title: "Determinantes das exportações brasileiras, 2000–2021: replicação e robustez"
+type: software
+authors:
+  - family-names: Soihet
+    given-names: Elena
+  - family-names: Saldanha
+    given-names: Alexandre Pereira
+license: MIT
+repository-code: "https://github.com/alexandrepsaldanha/determinantes-exportacoes-brasil"
+keywords:
+  - exportações
+  - Brasil
+  - China
+  - MQO
+  - autocorrelação
+  - Python
+preferred-citation:
+  type: conference-paper
+  title: "Determinantes das exportações brasileiras no período 2000 a 2021"
+  authors:
+    - family-names: Soihet
+      given-names: Elena
+    - family-names: Saldanha
+      given-names: Alexandre Pereira
+  collection-title: "Anais do XVI Encontro Internacional da Associação Keynesiana Brasileira"
+  conference:
+    name: "XVI Encontro Internacional da Associação Keynesiana Brasileira"
+    city: "Niterói"
+    region: "RJ"
+    country: "BR"
+  publisher:
+    name: "Faculdade de Economia – UFF"
+  year: 2023
+  isbn: "978-65-5941-955-5"
+  url: "https://www.even3.com.br/anais/akb2023/669571-determinantes-das-exportacoes-brasileiras-no-periodo-2000-a-2021"
