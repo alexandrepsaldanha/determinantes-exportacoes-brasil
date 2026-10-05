@@ -1,4 +1,4 @@
-# Determinantes das exportações brasileiras, 2000–2021
+# O que move as exportações brasileiras? China, commodities e câmbio (2000–2021)
 
 Repositório de replicação do artigo **"Determinantes das exportações brasileiras no período 2000 a 2021"**, de Elena Soihet e Alexandre Pereira Saldanha. O código reproduz as regressões publicadas a partir dos dados originais, em Python.
 
@@ -6,13 +6,21 @@ Repositório de replicação do artigo **"Determinantes das exportações brasil
 
 ![Coeficientes estimados](output/figures/coeficientes.png)
 
-**Resultado principal:** o quantum exportado pelo Brasil está associado ao PIB chinês (proxy de demanda) e ao preço das exportações de produtos básicos (proxy de oferta). Corrigida a autocorrelação dos resíduos, o câmbio efetivo real deixa de ter efeito estatisticamente significativo.
+**Resultado principal:** o volume exportado pelo Brasil acompanha o ciclo das commodities e a demanda chinesa, e não o câmbio. Uma alta de 10% no preço dos produtos básicos está associada a um quantum exportado cerca de 4% maior; corrigida a autocorrelação, o efeito do câmbio real é pequeno (elasticidade de 0,1) e estatisticamente nulo.
 
 ---
 
-## Pergunta
+## Pergunta econômica
 
-Quais fatores explicam o volume exportado pelo Brasil entre 2000 e 2021, período marcado pelo superciclo das commodities e pela ascensão da China como principal parceiro comercial?
+Entre 2000 e 2021, o volume exportado pelo Brasil mais que dobrou, enquanto a pauta se reprimarizava e a China passava de terceiro a primeiro destino. O que sustentou esse crescimento: a competitividade-preço dada pelo câmbio, os preços das commodities ou a renda do principal comprador?
+
+## Mecanismo
+
+A literatura combina determinantes de oferta e de demanda em uma equação reduzida (Schettini et al., 2012):
+
+- **Oferta (preço das commodities).** Para um país tomador de preços, uma alta do preço internacional dos produtos básicos eleva a rentabilidade de exportar e estimula a expansão da produção de soja, minério e petróleo.
+- **Demanda externa (renda da China).** O crescimento chinês, intensivo em matérias-primas, desloca para cima a demanda pelos bens que o Brasil exporta.
+- **Preço relativo (câmbio real).** Uma desvalorização torna o produto nacional mais barato em moeda estrangeira. Para commodities cotadas em dólar e com oferta pouco elástica no curto prazo, porém, espera-se um efeito pequeno sobre o volume.
 
 ## Dados
 
@@ -44,6 +52,24 @@ $$Y_t = \beta_0 + \beta_1 X_{1t} + \beta_2 X_{2t} + \beta_3 X_{3t} + e_t$$
 | Observações | 88 | 87 |
 
 Erros-padrão entre parênteses. *** p < 0,01. O notebook de replicação confere automaticamente que todos os coeficientes coincidem com os Quadros 3 e 4 do artigo.
+
+### Magnitudes
+
+Como as variáveis são índices em escalas diferentes, os coeficientes são mais bem lidos como **elasticidades na média** ($\beta \cdot \bar{X} / \bar{Y}$):
+
+| | MQO em nível | MQO corrigido (CORC) | Leitura (modelo corrigido) |
+|---|---:|---:|---|
+| Preço básico | 0,64 | 0,42 | +10% no preço → quantum ≈ 4% maior |
+| Câmbio efetivo real | 0,38 | 0,10 | efeito pequeno e não significativo |
+
+O coeficiente do PIB da China não tem leitura de elasticidade-renda: a variável mede a variação em relação ao trimestre anterior, e não o nível do PIB (ver Robustez).
+
+## Implicações
+
+- **Política cambial tem alcance limitado sobre o volume exportado.** Com uma pauta concentrada em commodities, a desvalorização do real pouco altera a quantidade vendida; o efeito aparece mais na receita em reais do que no volume. O resultado coincide com o de Veríssimo (2019) para exportações intensivas em recursos naturais.
+- **Vulnerabilidade ao ciclo externo.** A dependência do preço das commodities e de um único comprador expõe as exportações, e as contas externas, a choques de demanda e de preço que estão fora do alcance da política doméstica.
+
+**Limites da interpretação.** As estimativas são associações. O Brasil é um ofertante relevante de soja e minério de ferro, de modo que preço e quantidade são, em parte, determinados conjuntamente; e as séries em nível têm tendência. Uma estratégia de identificação mais exigente usaria um modelo de correção de erros ou variáveis instrumentais para o preço.
 
 ## Robustez
 
