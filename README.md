@@ -1,4 +1,4 @@
-# O que move as exportações brasileiras? China, commodities e câmbio (2000–2021)
+# Determinantes das exportações brasileiras no período 2000 a 2021
 
 Repositório de replicação do artigo **"Determinantes das exportações brasileiras no período 2000 a 2021"**, de Elena Soihet e Alexandre Pereira Saldanha. O código reproduz as regressões publicadas a partir dos dados originais, em Python.
 
